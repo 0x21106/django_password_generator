@@ -1,0 +1,82 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <style>
+      .generator-form {
+        width: 50%;
+        height: auto;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: whitesmoke;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 1px rgba(150, 150, 150, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <form action="{% url 'password' %}" class="generator-form bg-dark">
+      <h3 class="h3 text-center mb-3 text-light">Password Generator</h3>
+      <div class="my-2">
+        <select name="length" class="form-control">
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12" selected="selected">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+        </select>
+      </div>
+
+      <div class="form-check-inline my-2">
+        <input
+          type="checkbox"
+          name="uppercase"
+          id="uppercase"
+          class="form-check-input"
+        />
+        <label for="uppercase" class="form-check-label text-light">Uppercase</label>
+      </div>
+
+      <div class="form-check-inline my-2">
+        <input
+          type="checkbox"
+          name="numbers"
+          id="numbers"
+          class="form-check-input"
+        />
+        <label for="numbers" class="form-check-label text-light">Numbers</label>
+      </div>
+
+      <div class="form-check-inline my-2">
+        <input
+          type="checkbox"
+          name="special"
+          id="special"
+          class="form-check-input"
+        />
+        <label for="special" class="form-check-label text-light">Special Characters</label>
+      </div>
+
+      <input
+        type="submit"
+        value="Generate Password"
+        class="btn btn-primary btn-block my-2"
+      />
+    </form>
+    <h4 class="h4 my-4 text-center">
+        <a href="{% url 'about' %}" class="text-dark">About Me</a>
+    </h6>
+  </body>
+</html>
